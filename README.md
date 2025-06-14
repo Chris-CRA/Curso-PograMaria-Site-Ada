@@ -46,12 +46,9 @@
 
 ###
 
-<h3 align="left">🔥   Minhas Estatísticas :</h3>
-
-###
-
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=maurodesouza&locale=en&mode=daily&theme=dark&hide_border=false&border_radius=5&order=3" height="220" alt="streak graph"  />
+  <img src="https://github.com/Chris-CRA/Curso-PograMaria-Site-Ada/blob/output/snake.svg" alt="snake animation" />
 </div>
+
 
 ###
