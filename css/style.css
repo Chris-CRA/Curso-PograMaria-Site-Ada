@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@200;400;500;600;700;800;900&display=swap");
 
+/* Garante que padding e border não quebrem o layout */
+* {
+  box-sizing: border-box;
+}
 
 body {
   text-align: center;
@@ -7,60 +11,51 @@ body {
   background-color: #EE82EE;
   color: #ffffff;
   margin: 0;
+  padding: 0;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 3rem;
   font-weight: 300;
   margin-top: 20px;
 }
 
 h2 {
   color: black;
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
-.primeiro-h3 {
-  color: #8B008B;
-  font-size: 22px;
-  font-style: italic;
-}
-
-.segundo-h3 {
-  color: #4B0082;
-  font-size: 22px;
-  font-style: italic;
-}
-
-.terceiro-h3 {
-  color: #9400D3;
-  font-size: 22px;
-  font-style: italic;
-}
-
+.primeiro-h3,
+.segundo-h3,
+.terceiro-h3,
 .título-lista {
-  color: #8A2BE2;
-  font-size: 22px;
+  font-size: 1.5rem;
   font-style: italic;
 }
+
+.primeiro-h3 { color: #8B008B; }
+.segundo-h3 { color: #4B0082; }
+.terceiro-h3 { color: #9400D3; }
+.título-lista { color: #8A2BE2; }
 
 section {
-  width: 60%;
-  margin: 0 auto;
-}
-
-section section {
   width: 100%;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 p {
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
 }
 
 img {
   width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 1rem 0;
 }
 
 ul {
@@ -77,9 +72,12 @@ a {
 
 .principal {
   background: #FFE4E1;
-  height: 60px;
-  max-width: 60%;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 2rem;
 }
 
 .principal a {
@@ -89,15 +87,14 @@ a {
 }
 
 .principal li {
-  display: inline-block;
-  line-height: 2.5;
-  margin: 0 89px;
+  display: inline;
 }
 
-
+/* FORMULÁRIO */
 .wrapper {
   margin-top: 40px;
-  width: 420px;
+  width: 100%;
+  max-width: 500px;
   background-color: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(15px);
@@ -111,7 +108,7 @@ a {
 }
 
 .wrapper h1 {
-  font-size: 30px;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -119,21 +116,19 @@ a {
   width: 100%;
   position: relative;
   margin: 30px 0;
-  height: auto;
 }
 
 .input-box input,
 .input-box textarea {
-  width: 90%;
-  height: 100%;
+  width: 100%;
   background: transparent;
   border: none;
   outline: none;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  font-size: 16px;
+  font-size: 1rem;
   color: #fff;
-  padding: 20px;
+  padding: 1rem;
   font-family: "Poppins", sans-serif;
 }
 
@@ -164,7 +159,7 @@ a {
   border-radius: 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   color: #333;
   font-weight: 600;
 }
@@ -183,4 +178,47 @@ a {
 
 .wrapper .register-link p a:hover {
   text-decoration: underline;
+}
+
+/* MEDIA QUERIES – ajusta para telas menores */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .principal {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .principal li {
+    margin: 0.5rem 0;
+  }
+
+  section {
+    padding: 0.5rem;
+  }
+
+  .wrapper {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 1rem;
+  }
+
+  .input-box i {
+    display: none;
+  }
+
+  .wrapper h1 {
+    font-size: 1.5rem;
+  }
 }
