@@ -73,23 +73,45 @@ a {
 .principal {
   background: #FFE4E1;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.principal ul {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  gap: 1.5rem;
+}
+
+.principal li {
+  list-style: none;
 }
 
 .principal a {
   color: #696969;
   text-decoration: underline;
   font-weight: normal;
+  font-size: 1.1rem;
 }
 
-.principal li {
-  display: inline;
-}
+/* Ajustes extras para telas menores */
+@media (max-width: 600px) {
+  .principal a {
+    font-size: 1rem;
+  }
 
+  .principal {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+}
 /* FORMULÁRIO */
 .wrapper {
   margin-top: 40px;
